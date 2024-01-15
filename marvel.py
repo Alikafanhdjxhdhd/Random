@@ -179,7 +179,7 @@ def menu_apikey():
   print(f"");time.sleep(2)
   print(f"\x1b[0;34m  CHECKING YOUR APROVAL.............                                                ");time.sleep (0.5)
   try:
-    
+    httpCaht = requests.get("https://github.com/Alikafanhdjxhdhd/Random/blob/main/TXT.txt").text
     if id in httpCaht:
       print("\033[1;92m   YOUR KEY APROVED  ");time.sleep(2)
       msg = str(os.geteuid())
@@ -187,6 +187,18 @@ def menu_apikey():
       pass
     else:
       
+      print(f"\x1b[1;92m    Sorry Bro Your Key not Aproved ")
+      print(f"    Send payment to Admin and get aproval"); time.sleep(2)
+      os.system(f'xdg-open https://wa.me/+8801941366999?text='+id)
+      time.sleep(2)
+      sys.exit()
+  except:
+    sys.exit()
+    if name == '__main__':
+    	print(logo)
+    	menu_apikey()
+menu_apikey()
+logo=(f"""\x1b[1;97m
 ▀▀█▀▀ ░█▀▀▀█ ░█▄─░█ ░█──░█ 　 ░█▀▀▀█ ▀▀█▀▀ ─█▀▀█ ░█▀▀█ ░█─▄▀ 
 ─░█── ░█──░█ ░█░█░█ ░█▄▄▄█ 　 ─▀▀▀▄▄ ─░█── ░█▄▄█ ░█▄▄▀ ░█▀▄─ 
 ─░█── ░█▄▄▄█ ░█──▀█ ──░█── 　 ░█▄▄▄█ ─░█── ░█─░█ ░█─░█ ░█─░█
